@@ -12,7 +12,7 @@ instructions_needed = input(
 # Make sure they can use lower or uppercase
 answer = instructions_needed.lower()
 
-# Provides instructions
+# Provides instructions or starts the game
 if answer == "y":
     ready_to_start = input(
         """
@@ -23,10 +23,17 @@ If you get a question wrong you will be out and lose all your money. Good luck, 
 else:
     ready_to_start = input("In that case are you ready to begin (y/n)? ")
 
-# Give player a chance to exit game
+# Give player a chance to exit game or start game
 if ready_to_start == "n":
     print("Thanks for playing " + str(start_game_name) + "! Goodbye")
     exit()
+else:
+    print("Question 1: Does a cat have a: 1, b: 2, c: 3, d: 4, legs?")
+    input("choose a, b, c or d: ")
+    
+
+
+
 
 
 print(ready_to_start)
