@@ -1,7 +1,57 @@
-# import requests
+
 import json
 
 # winnings = 0
+
+# print(ready_to_start)
+
+json_data = {
+    "response_code": 0,
+    "results": [
+        {
+            "category": "General Knowledge",
+            "type": "multiple",
+            "difficulty": "easy",
+            "question": "Which sign of the zodiac is represented by the Crab?",
+            "correct_answer": "Cancer",
+            "incorrect_answers": ["Libra", "Virgo", "Sagittarius"],
+        },
+        {
+            "category": "General Knowledge",
+            "type": "multiple",
+            "difficulty": "easy",
+            "question": "What is the Spanish word for &quot;donkey&quot;?",
+            "correct_answer": "Burro",
+            "incorrect_answers": ["Caballo", "Toro", "Perro"],
+        },
+        {
+            "category": "General Knowledge",
+            "type": "multiple",
+            "difficulty": "easy",
+            "question": "Which candy is NOT made by Mars?",
+            "correct_answer": "Almond Joy",
+            "incorrect_answers": ["M&amp;M&#039;s", "Twix", "Snickers"],
+        },
+        {
+            "category": "General Knowledge",
+            "type": "multiple",
+            "difficulty": "easy",
+            "question": "The Flag of the European Union has how many stars on it?",
+            "correct_answer": "12",
+            "incorrect_answers": ["10", "14", "16"],
+        },
+        {
+            "category": "General Knowledge",
+            "type": "multiple",
+            "difficulty": "easy",
+            "question": "What is the closest planet to our solar system&#039;s sun?",
+            "correct_answer": "Mercury",
+            "incorrect_answers": ["Mars", "Jupiter", "Earth"],
+        },
+    ],
+}
+
+
 
 # Gets the players name
 start_game_name = input(
@@ -295,15 +345,4 @@ if q5answer == "b":
 else:
     exit_game()
 
-# print(ready_to_start)
 
-# response = requests.get("https://google.com")
-
-# data = response.json()
-
-# convert = json.dumps(data)
-
-# quest_dict = []
-
-# print(response.status_code)
-# print(convert)
