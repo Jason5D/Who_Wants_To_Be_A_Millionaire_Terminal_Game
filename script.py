@@ -3,7 +3,7 @@ import json
 import random
 
 response = requests.get(
-    "https://opentdb.com/api.php?amount=5&category=9&difficulty=easy&type=multiple"
+    "https://opentdb.com/api.php?amount=15&category=9&difficulty=easy&type=multiple"
 )
 
 json_data = response.json()
@@ -55,7 +55,6 @@ json_data = response.json()
 #         },
 #     ],
 # }
-
 
 
 # Gets the players name
@@ -111,7 +110,7 @@ if ready_to_start.lower() == "y":
     q1answer = input("The correct answer is: ")
 else:
     exit_game()
-if q1answer.title() == correct_one:
+if q1answer == correct_one:
     congratulations(100)
 else:
     exit_game()
@@ -129,7 +128,7 @@ if want_to_continue() == "y":
     q2answer = input("The correct answer is: ")
 else:
     exit_game()
-if q2answer.title() == correct_two:
+if q2answer == correct_two:
     congratulations(200)
 else:
     exit_game()
@@ -147,7 +146,7 @@ if want_to_continue() == "y":
     q3answer = input("The correct answer is: ")
 else:
     exit_game()
-if q3answer.title() == correct_three:
+if q3answer == correct_three:
     congratulations(300)
 else:
     exit_game()
@@ -165,7 +164,7 @@ if want_to_continue() == "y":
     q4answer = input("The correct answer is: ")
 else:
     exit_game()
-if q4answer.title() == correct_four:
+if q4answer == correct_four:
     congratulations(500)
 else:
     exit_game()
@@ -183,231 +182,196 @@ if want_to_continue() == "y":
     q5answer = input("The correct answer is: ")
 else:
     exit_game()
-if q5answer.title() == correct_five:
+if q5answer == correct_five:
     congratulations(1000)
 else:
     exit_game()
 
+
 # Question 6 - £2000
-data = json_data["results"][0]
-question_one = data["incorrect_answers"]
-correct_one = data["correct_answer"]
-question_one.insert(random.randint(0, len(question_one)), data["correct_answer"])
+data = json_data["results"][5]
+question_six = data["incorrect_answers"]
+correct_six = data["correct_answer"]
+question_six.insert(random.randint(0, len(question_six)), data["correct_answer"])
 
 if want_to_continue() == "y":
     print(" ")
-    print(
-        "For £2000, Question 6:", json_data["results"][0]["question"]
-    )
-    print("a: 1492")
-    print("b: 1620")
-    print("c: 1776")
-    print("d: 1812")
+    print("For £2000, Question 6:", json_data["results"][5]["question"])
+    print(question_six)
     q6answer = input("The correct answer is: ")
 else:
     exit_game()
-if q5answer.title() == "a":
+if q6answer == correct_six:
     congratulations(2000)
 else:
     exit_game()
 
 # Question 7 - £4000
-data = json_data["results"][0]
-question_one = data["incorrect_answers"]
-correct_one = data["correct_answer"]
-question_one.insert(random.randint(0, len(question_one)), data["correct_answer"])
+data = json_data["results"][6]
+question_seven = data["incorrect_answers"]
+correct_seven = data["correct_answer"]
+question_one.insert(random.randint(0, len(question_seven)), data["correct_answer"])
 
 if want_to_continue() == "y":
     print(" ")
-    print(
-        "For £4000, Question 7:", json_data["results"][0]["question"]
-    )
-    print("a: Oxygen")
-    print("b: Carbon Diaoxide")
-    print("c: Nitrogen")
-    print("d: Hydrogen")
-    q5answer = input("The correct answer is: ")
+    print("For £4000, Question 7:", json_data["results"][6]["question"])
+    print(question_seven)
+    q7answer = input("The correct answer is: ")
 else:
     exit_game()
-if q5answer.title() == "c":
+if q7answer.title() == correct_seven:
     congratulations(4000)
 else:
     exit_game()
 
 # Question 8 - £8000
-data = json_data["results"][0]
-question_one = data["incorrect_answers"]
-correct_one = data["correct_answer"]
-question_one.insert(random.randint(0, len(question_one)), data["correct_answer"])
+data = json_data["results"][7]
+question_eight = data["incorrect_answers"]
+correct_eight = data["correct_answer"]
+question_eight.insert(random.randint(0, len(question_eight)), data["correct_answer"])
 
 if want_to_continue() == "y":
     print(" ")
-    print(
-        "For £8000, Question 8:", json_data["results"][0]["question"]
-    )
-    print("a: Amelia Earhart")
-    print("b: Marie Curie")
-    print("c: Rosa Parks")
-    print("d: Joan of Arc")
-    q5answer = input("The correct answer is: ")
+    print("For £8000, Question 8:", json_data["results"][7]["question"])
+    print(question_eight)
+    q8answer = input("The correct answer is: ")
 else:
     exit_game()
-if q5answer.title() == "a":
+if q8answer.title() == correct_eight:
     congratulations(8000)
 else:
     exit_game()
 
 # Question 9 - £16000
-data = json_data["results"][0]
-question_one = data["incorrect_answers"]
-correct_one = data["correct_answer"]
-question_one.insert(random.randint(0, len(question_one)), data["correct_answer"])
+data = json_data["results"][8]
+question_nine = data["incorrect_answers"]
+correct_nine = data["correct_answer"]
+question_nine.insert(random.randint(0, len(question_nine)), data["correct_answer"])
 
 if want_to_continue() == "y":
     print(" ")
     print("For £16,000, Qution 9:", json_data["results"][0]["question"])
-    print("a: Mississippi River")
-    print("b: Nile River")
-    print("c: Amazon River")
-    print("d: Yangtze River")
-    q5answer = input("The correct answer is: ")
+    print(question_nine)
+    q9answer = input("The correct answer is: ")
 else:
     exit_game()
-if q5answer.title() == "b":
+if q9answer.title() == correct_nine:
     congratulations(16000)
 else:
     exit_game()
 
 # Question 10 - £32000
-data = json_data["results"][0]
-question_one = data["incorrect_answers"]
-correct_one = data["correct_answer"]
-question_one.insert(random.randint(0, len(question_one)), data["correct_answer"])
+data = json_data["results"][9]
+question_ten = data["incorrect_answers"]
+correct_ten = data["correct_answer"]
+question_ten.insert(random.randint(0, len(question_ten)), data["correct_answer"])
 
 if want_to_continue() == "y":
     print(" ")
-    print(
-        "For £32,000, Question 10:", json_data["results"][0]["question"]
-    )
-    print("a: China")
-    print("b: India")
-    print("c: Japan")
-    print("d: South Korea")
-    q5answer = input("The correct answer is: ")
+    print("For £32,000, Question 10:", json_data["results"][9]["question"])
+    print(question_ten)
+    q10answer = input("The correct answer is: ")
 else:
     exit_game()
-if q5answer == "c":
+if q10answer == correct_ten:
     congratulations(32000)
 else:
     exit_game()
 
 # Question 11 - £64000
-data = json_data["results"][0]
-question_one = data["incorrect_answers"]
-correct_one = data["correct_answer"]
-question_one.insert(random.randint(0, len(question_one)), data["correct_answer"])
+data = json_data["results"][10]
+question_eleven = data["incorrect_answers"]
+correct_eleven = data["correct_answer"]
+question_eleven.insert(random.randint(0, len(question_eleven)), data["correct_answer"])
 
 if want_to_continue() == "y":
     print(" ")
     print("For £64,000, Question 11:", json_data["results"][0]["question"])
-    print("a: H2O")
-    print("b: CO2")
-    print("c: O2")
-    print("d: NaCl")
-    q5answer = input("The correct answer is: ")
+    print(question_eleven)
+    q11answer = input("The correct answer is: ")
 else:
     exit_game()
-if q5answer == "a":
+if q11answer == correct_eleven:
     congratulations(64000)
 else:
     exit_game()
 
 # Question 12 - £125000
-data = json_data["results"][0]
-question_one = data["incorrect_answers"]
-correct_one = data["correct_answer"]
-question_one.insert(random.randint(0, len(question_one)), data["correct_answer"])
+data = json_data["results"][11]
+question_twelve = data["incorrect_answers"]
+correct_twelve = data["correct_answer"]
+question_twelve.insert(random.randint(0, len(question_twelve)), data["correct_answer"])
 
 if want_to_continue() == "y":
     print(" ")
-    print("For £125,000, Question 12:", json_data["results"][0]["question"])
-    print("a: Vincent van Gogh")
-    print("b: Pablo Picasso")
-    print("c: Leonardo da Vinci")
-    print("d: Michelangelo")
-    q5answer = input("The correct answer is: ")
+    print("For £125,000, Question 12:", json_data["results"][11]["question"])
+    print(question_twelve)
+    q12answer = input("The correct answer is: ")
 else:
     exit_game()
-if q5answer == "c":
+if q12answer == correct_twelve:
     congratulations(125000)
 else:
     exit_game()
 
 # Question 13 - £250000
-data = json_data["results"][0]
-question_one = data["incorrect_answers"]
-correct_one = data["correct_answer"]
-question_one.insert(random.randint(0, len(question_one)), data["correct_answer"])
+data = json_data["results"][12]
+question_thirteen = data["incorrect_answers"]
+correct_thirteen = data["correct_answer"]
+question_thirteen.insert(
+    random.randint(0, len(question_thirteen)), data["correct_answer"]
+)
 
 if want_to_continue() == "y":
     print(" ")
-    print("For £250,000, Question 13:", json_data["results"][0]["question"])
-    print("a: Earth")
-    print("b: Mars")
-    print("c: Jupiter")
-    print("d: Saturn")
-    q5answer = input("The correct answer is: ")
+    print("For £250,000, Question 13:", json_data["results"][12]["question"])
+    print(question_thirteen)
+    q13answer = input("The correct answer is: ")
 else:
     exit_game()
-if q5answer == "c":
+if q13answer == correct_thirteen:
     congratulations(250000)
 else:
     exit_game()
 
 # Question 14 - £500000
-data = json_data["results"][0]
-question_one = data["incorrect_answers"]
-correct_one = data["correct_answer"]
-question_one.insert(random.randint(0, len(question_one)), data["correct_answer"])
+data = json_data["results"][13]
+question_fourteen = data["incorrect_answers"]
+correct_fourteen = data["correct_answer"]
+question_fourteen.insert(
+    random.randint(0, len(question_fourteen)), data["correct_answer"]
+)
 
 if want_to_continue() == "y":
     print(" ")
-    print(
-        "For £500,000, Question 14:", json_data["results"][0]["question"]
-    )
-    print("a: Respiration")
-    print("b: Photosynthesis")
-    print("c: Digestion")
-    print("d: Fermentation")
-    q5answer = input("The correct answer is: ")
+    print("For £500,000, Question 14:", json_data["results"][13]["question"])
+    print(question_fourteen)
+    q14answer = input("The correct answer is: ")
 else:
     exit_game()
-if q5answer == "b":
+if q14answer == correct_fourteen:
     congratulations(500000)
 else:
     exit_game()
 
 # Question 15 - £10000000
-data = json_data["results"][0]
-question_one = data["incorrect_answers"]
-correct_one = data["correct_answer"]
-question_one.insert(random.randint(0, len(question_one)), data["correct_answer"])
+data = json_data["results"][14]
+question_fifthteen = data["incorrect_answers"]
+correct_fifthteen = data["correct_answer"]
+question_fifthteen.insert(
+    random.randint(0, len(question_fifthteen)), data["correct_answer"]
+)
 
 if want_to_continue() == "y":
     print(" ")
     print("THE MILLION POUND QUESTION!!")
-    print("Question 15:", json_data["results"][0]["question"])
-    print("a: 1901")
-    print("b: 1912")
-    print("c: 1923")
-    print("d: 1934")
-    q5answer = input("The correct answer is: ")
+    print("Question 15:", json_data["results"][14]["question"])
+    print(question_fifthteen)
+    q15answer = input("The correct answer is: ")
 else:
     exit_game()
-if q5answer == "b":
+if q15answer == correct_fifthteen:
     print("AMAZING")
     print("YOU ARE NOW A MILLIONAIRE")
 else:
     exit_game()
-
-
