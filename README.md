@@ -60,5 +60,6 @@ Q15 - £1000000 winner!
 
 6. Contributions
 
-- GEt in touch if you can help
+- Get in touch if you can help
 - Future goal, is to maintain a leaderboard for whoever has played to see who can get the furthest!
+- There is a slight issue with data from the API. Some data comes in corrupted so I will have to search for another api
